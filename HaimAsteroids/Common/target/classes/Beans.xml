@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-http://www.springframework.org/schema/beans ">
-
-    <bean id="IEntityProcessors" class="dk.sdu.mmmi.cbse.common.services.IEntityProcessingService" abstract="true"/>
-    <bean id="IGamePluginServices." class="dk.sdu.mmmi.cbse.common.services.IGamePluginService" abstract="true"/>
-</beans>
