@@ -27,7 +27,11 @@ public class PlayerControlSystem implements IEntityProcessingService {
             movingPart.setRight(gameData.getKeys().isDown(RIGHT));
             movingPart.setUp(gameData.getKeys().isDown(UP));
             if(gameData.getKeys().isDown(SPACE)){
-                bulletPlugin.createBulletShip(world, positionPart.getX(), positionPart.getY(), positionPart.getRadians());
+                float radians = positionPart.getRadians();
+                float x = positionPart.getX() + (float)Math.cos(radians) * 8;
+                float y = positionPart.getY() + (float)Math.sin(radians) * 8;
+
+                bulletPlugin.createBulletShip(world, x, y, positionPart.getRadians());
             }
             
             
