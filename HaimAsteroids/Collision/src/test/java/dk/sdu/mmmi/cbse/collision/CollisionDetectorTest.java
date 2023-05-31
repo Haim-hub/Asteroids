@@ -8,6 +8,7 @@ import dk.sdu.mmmi.cbse.collision.Collider;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
+import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,38 +18,27 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class CollisionDetectorTest {
-    
+
     public CollisionDetectorTest() {
-    }
-    
-    @BeforeAll
-    public static void setUpClass() {
-    }
-    
-    @AfterAll
-    public static void tearDownClass() {
-    }
-    
-    @BeforeEach
-    public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
     }
 
 
     @Test
     public void testCollides() {
         System.out.println("collides");
-        Entity entity = null;
-        Entity entity2 = null;
+        Entity entity = new Entity();
+        entity.add(new PositionPart(0.0f, 0.0f, 0.0f));
+        entity.setRadius(10f);
+
+        Entity entity2 = new Entity();
+        entity2.add(new PositionPart(0.0f, 0.0f, 0.0f));
+        entity2.setRadius(10f);
+
         Collider instance = new Collider();
-        Boolean expResult = null;
+        Boolean expResult = true;
         Boolean result = instance.Collides(entity, entity2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
+

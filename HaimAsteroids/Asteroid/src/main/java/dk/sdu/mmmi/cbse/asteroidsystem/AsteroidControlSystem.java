@@ -24,7 +24,6 @@ public class AsteroidControlSystem implements IEntityProcessingService {
 
         for (Entity asteroid : world.getEntities(Asteroid.class)) {
 
-            //Movement
             PositionPart positionPart = asteroid.getPart(PositionPart.class);
             MovingPart movingPart = asteroid.getPart(MovingPart.class);
             int i = rand.nextInt(7);
@@ -80,19 +79,6 @@ public class AsteroidControlSystem implements IEntityProcessingService {
         shapex[5] = (float) (x + Math.cos(radians - 0.8 * 3.1145f) * entity.getRadius());
         shapey[5] = (float) (y + Math.sin(radians - 0.8 * 3.1145f) * entity.getRadius());
 
-        /*
-        shapex[0] = (float) (x + Math.cos(radians + 1 * 3.1415f / 5) * entity.getRadius());
-        shapey[0] = (float) (y + Math.sin(radians + 1 * 3.1145f / 5) * entity.getRadius());
-
-        shapex[1] = (float) (x + Math.cos(radians - 1 * 3.1415f / 5) * entity.getRadius());
-        shapey[1] = (float) (y + Math.sin(radians - 1 * 3.1145f / 5) * entity.getRadius());
-
-        shapex[2] = (float) (x + Math.cos(radians - 4 * 3.1415f / 5) * entity.getRadius());
-        shapey[2] = (float) (y + Math.sin(radians - 4 * 3.1145f / 5) * entity.getRadius());
-
-        shapex[3] = (float) (x + Math.cos(radians + 4 * 3.1415f / 5) * entity.getRadius());
-        shapey[3] = (float) (y + Math.sin(radians + 4 * 3.1415f / 5) * entity.getRadius());
-        */
 
         entity.setShapeX(shapex);
         entity.setShapeY(shapey);

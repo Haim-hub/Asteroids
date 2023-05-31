@@ -10,10 +10,7 @@ import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.*;
 
-/**
- *
- * @author jcs
- */
+
 public class PlayerControlSystem implements IEntityProcessingService {
     private BulletPlugin bulletPlugin = new BulletPlugin();
     @Override
