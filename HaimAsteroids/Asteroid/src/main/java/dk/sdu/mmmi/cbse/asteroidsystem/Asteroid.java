@@ -8,10 +8,6 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 
 import java.util.Random;
 
-/**
- *
- * @author corfixen
- */
 public class Asteroid extends Entity {
     private AsteroidSize asteroidSize;
     private Random rnd = new Random();

@@ -9,10 +9,6 @@ import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 
 import java.util.Random;
 
-/**
- *
- * @author jcs
- */
 public class EnemyControlSystem implements IEntityProcessingService {
     private final Random rand = new Random();
 
